@@ -7,6 +7,8 @@ import multer from "multer"
 import cors from "cors"
 import dotenv from "dotenv";
 
+//middleware
+
 const app = express();
 dotenv.config();
 
