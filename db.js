@@ -5,5 +5,6 @@ export const db = mysql2.createConnection({
     user: process.env.DB_DATABASE,
     password: process.env.DB_USER,
     database: process.env.DB_PASSWORD,
-    multipleStatements: true
+    multipleStatements: true,
+    port: 3306
 })
