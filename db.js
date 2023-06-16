@@ -1,10 +1,9 @@
-import mysql2 from "mysql2";
+import mysql from "mysql";
 
-export const db = mysql2.createConnection({
+export const db = mysql.createConnection({
     host: process.env.DB_HOST,
     user: process.env.DB_DATABASE,
     password: process.env.DB_USER,
     database: process.env.DB_PASSWORD,
-    multipleStatements: true,
-    port: 3306
+    port: 3306,
 })
