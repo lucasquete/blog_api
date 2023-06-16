@@ -1,4 +1,5 @@
 import mysql from "mysql";
+import { createPool } from 'mysql2/promise'
 import dotenv from "dotenv";
 dotenv.config();
 
@@ -7,8 +8,11 @@ export const db = mysql.createConnection({
     user: process.env.DB_USER,
     password: process.env.DB_PASSWORD,
     database: process.env.DB_DATABASE,
-    // waitForConnections: true,
-    // connectionLimit: 10,
-    // queueLimit: 0,
-    // port: 3306
+});
+
+export const db2 = createPool({
+    host: process.env.DB_HOST,
+    user: process.env.DB_USER,
+    password: process.env.DB_PASSWORD,
+    database: process.env.DB_DATABASE,
 });
