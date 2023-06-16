@@ -5,8 +5,10 @@ import postRoutes from "./routes/posts.js"
 import cookieParser from "cookie-parser";
 import multer from "multer"
 import cors from "cors"
+import dotenv from "dotenv";
 
 const app = express();
+dotenv.config();
 
 app.use(cors());
 
@@ -34,5 +36,5 @@ app.use("/api/users", userRoutes);
 app.use("/api/posts", postRoutes);
 
 app.listen(8800, () => {
-    console.log("connected");
+  console.log("connected");
 })
