@@ -19,7 +19,7 @@ app.use(cookieParser());
 
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
-      cb(null, 'https://blog-drab-seven-35.vercel.app/public/uploads')
+      cb(null, 'https://blog-drab-seven-35.vercel.app/client/public/uploads')
     },
     filename: function (req, file, cb) {
       cb(null, Date.now()+file.originalname)
