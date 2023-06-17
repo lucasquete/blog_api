@@ -56,7 +56,7 @@ export const addPost = async (req, res) => {
             // userInfo.id,
         ]
 
-        const [res] = await db2.query(q, [values]);
+        await db2.query(q, [values]);
 
         return res.status(200).json("Post has been created");
       
