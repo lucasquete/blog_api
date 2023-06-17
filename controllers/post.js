@@ -38,11 +38,11 @@ export const getPost = (req, res) => {
 
 export const addPost = async (req, res) => {
     try {
-        const token = req.cookies.access_token;
-        if (!token) return res.status(401).json("Not authenticated");
+        // const token = req.cookies.access_token;
+        // if (!token) return res.status(401).json("Not authenticated");
 
-        const tokenRes = jwt.verify(token, "jwtkey")
-        if (!tokenRes) return res.status(403).json("Token is not valid");
+        // const tokenRes = jwt.verify(token, "jwtkey")
+        // if (!tokenRes) return res.status(403).json("Token is not valid");
 
         const q = "INSERT INTO posts(`title`, `desc`, `img`, `cat`, `date`, `uid`) VALUES (?)";
 
